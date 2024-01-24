@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>パスワードジェネレーター</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- JS -->
+  <script src="js/main.js" defer></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div id="result-box"><p id="result">kJaopyGr</p></div>
+    <button id="btn">パスワードを生成</button>
+    <fieldset>
+      <legend>オプション</legend>
+      <label>
+        <span id="slider-label">長さ(<span id="pwd-length">8</span>)</span>
+        <input id="slider" name="pwdRange" type="range" min="8" max="24" value="8">
+      </label>
+      <label>
+        数字
+        <input id="numbers-checkbox" name="pwdNumber" type="checkbox">
+      </label>
+      <label>
+        記号
+        <input id="symbols-checkbox" name="pwdSymbol" type="checkbox">
+      </label>
+    </fieldset>
+    <div id="explanation">
+      <ul>
+        <li>指定した文字数のパスワードをランダムで生成します。</li>
+        <li>生成されたパスワードをクリックするとコピーできます。</li>
+        <li>アルファベットの大文字と小文字が必ず最低1個ずつ含まれます。</li>
+        <li>オプションで数字や記号をチェックすれば同様に最低1個ずつは含まれます。</li>
+        <li>同じ文字や数字および記号が隣り合うことはありません。</li>
+        <li>この画面はviewport285pxまでレスポンシブします。</li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
