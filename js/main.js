@@ -82,7 +82,7 @@
     } while (isCheckForConsecutiveString(pwd));
   }
   // --------------------------------------
-  function isStringCoppy(text){
+  function isStringCoppy(text) {
     // navigator.clipboardが利用可能な場合
     if (navigator.clipboard) {
       // クリップボードにコピー
@@ -103,8 +103,8 @@
       document.body.removeChild(textarea);  // textarea要素を削除
     }
   }
-  function isRemoveMessage(){
-    if(document.querySelector('#message')){
+  function isRemoveMessage() {
+    if (document.querySelector('#message')) {
       result.parentNode.removeChild(document.querySelector('#message'));
     }
   }
@@ -139,6 +139,15 @@
     message.setAttribute('id', 'message');
     message.textContent = 'パスワードがコピーされました';
     result.parentElement.appendChild(message);
+  });
+  // --------------------------------------
+  document.addEventListener('touchend', function (event) {
+    let lastTouchEnd;
+    let now = new Date().getTime();
+    if (now - lastTouchEnd <= 300) {
+      event.preventDefault();
+    }
+    lastTouchEnd = now;
   });
   // --------------------------- 処理の実行 ------------------------------
   window.addEventListener('load', () => {
